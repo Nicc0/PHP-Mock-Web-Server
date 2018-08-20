@@ -1,0 +1,1 @@
+php7.1 ./vendor/bin/phpunit -c phpunit.xml --colors=auto --testdox ${@}
