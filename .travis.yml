@@ -2,7 +2,10 @@ language: php
 
 php:
   - '7.1'
-  - hhvm # on Trusty only
   - nightly
+
+install:
+    - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
+    - composer install $flags
 
 script: phpunit -c phpunit.xml --colors=auto --testdox ${@}
