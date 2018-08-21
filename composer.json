@@ -1,6 +1,6 @@
 {
-    "name": "PHP Mock Web Server",
-    "description": "TODO",
+    "name": "php-mock-web-server",
+    "description": "Mockable Web Server for PHP",
     "type": "library",
     "require": {
         "php": "^7.1",
