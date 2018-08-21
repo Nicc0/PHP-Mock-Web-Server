@@ -1,11 +1,16 @@
 language: php
 
 php:
-  - '7.1'
-  - nightly
+- '7.0'
+- '7.1'
+- '7.2'
+- nightly
+
+env:
+- PHP_CMD="php"
 
 install:
-    - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
-    - composer install $flags
+- flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
+- composer install $flags
 
 script: phpunit -c phpunit.xml --colors=auto --testdox ${@}

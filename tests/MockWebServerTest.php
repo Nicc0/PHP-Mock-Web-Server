@@ -33,6 +33,14 @@ class MockWebServerTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
+        $php = \getenv('PHP_CMD');
+
+        foreach ([$php, 'php7.1', 'php'] as $version) {
+            if (!empty($version) && \exec("$version -v | grep ^PHP")) {
+                $php = $version; break;
+            }
+        }
+
         $cache = new FileCache();
 
         $options = $this->getMockBuilder(MockWebServerOptions::class)
@@ -41,7 +49,7 @@ class MockWebServerTest extends \PHPUnit\Framework\TestCase
 
         $options->method('getHost')->willReturn('127.0.0.1');
         $options->method('getCache')->willReturn($cache);
-        $options->method('getPhpVersion')->willReturn('php7.1');
+        $options->method('getPhpVersion')->willReturn($php);
 
         $useStatic = &$this->useStatic;
         $usePort = &$this->usePort;
