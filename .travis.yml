@@ -12,4 +12,7 @@ install:
 - flags="--ansi --prefer-dist --no-interaction --optimize-autoloader --no-suggest --no-progress"
 - composer install $flags
 
-script: phpunit -c phpunit.xml --colors=auto --testdox ${@}
+script: phpunit -c phpunit.xml --coverage-clover=coverage.xml
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
