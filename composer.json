@@ -1,5 +1,5 @@
 {
-    "name": "php-mock-web-server",
+    "name": "nicc0/php-mock-web-server",
     "description": "Mockable Web Server for PHP",
     "type": "library",
     "require": {
