@@ -6,7 +6,8 @@
 
  - List item
  -  
- - 
+ - Compatible with PHP 7.1 and later
+ - And much more
 
 ## Requirements
 
@@ -18,15 +19,35 @@
 ## Installation
 
 PHP Mock Web Server is available on [Packagist](https://packagist.org/packages/nicc0/php-mock-web-server) and installation via Composer is the recommended way to install PHP Mock Web Server. Just add this line to your `composer.json` file:
-
-    "nicc0/php-mock-web-server": "~1.0.0"
-
+```json
+"nicc0/php-mock-web-server": "~1.0.0"
+```
 or run
-
-    composer require-dev nicc0/php-mock-web-server
-
+```sh
+composer require-dev nicc0/php-mock-web-server
+```
 ## A Simple Example
+```php
+<?php
 
-    <?php
-    
+$options = new MockWebServerOptions();
+$options->setCache(new FileCache());
+$options->setStatic(false);
+
+$mockWebServer = new MockWebServer($options);
+
+if ($mockWebServer->isRunning()) {
+  $responseOptions = new ResponseOptions([
+    'status' => 200,
+    'method' => ResponseConst::METHOD_GET,
+  ]);
+
+  $response = new Response($responseOptions);
+
+  if ($mockWebServer->setResponse('/test', $response)) {
+    $url = $reponse->getUrlForResponse();
+  }
+}
+
+```
 ## Example Responses
