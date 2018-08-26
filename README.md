@@ -40,6 +40,11 @@ if ($mockWebServer->isRunning()) {
   $responseOptions = new ResponseOptions([
     'status' => 200,
     'method' => ResponseConst::METHOD_GET,
+    'body' => \json_encode([
+      'status' => 200,
+      'result' => 'Example response result',
+      'error' => false,
+    ], JSON_PRETTY_PRINT),
   ]);
 
   $response = new Response($responseOptions);
