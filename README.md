@@ -1,6 +1,6 @@
 # Mock Web Server for PHP 7.1
 
-[![Build Status](https://img.shields.io/travis/Nicc0/php-mock-web-server.svg?style=flat-square)](https://travis-ci.org/Nicc0/php-mock-web-server) [![Codecov](https://img.shields.io/codecov/c/github/nicc0/php-mock-web-server.svg?style=flat-square)](https://codecov.io/gh/Nicc0/php-mock-web-server)
+[![Build Status](https://img.shields.io/travis/Nicc0/PHP-Mock-Web-Server.svg?style=flat-square)](https://travis-ci.org/Nicc0/php-mock-web-server) [![Codecov](https://img.shields.io/codecov/c/github/nicc0/php-mock-web-server.svg?style=flat-square)](https://codecov.io/gh/Nicc0/php-mock-web-server)
 
 ## Library Features
 
@@ -50,7 +50,11 @@ if ($mockWebServer->isRunning()) {
   $response = new Response($responseOptions);
 
   if ($mockWebServer->setResponse('/test', $response)) {
-    $url = $reponse->getUrlForResponse();
+    $url = $mockWebServer->getUrlForResponse('/test');
+    $rawResponse = \file_get_contents($url);
+    $customResponse = \json_decode($rawResponse, true);
+
+    var_dump($customResponse);
   }
 }
 
