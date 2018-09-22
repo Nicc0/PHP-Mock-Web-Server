@@ -1,6 +1,7 @@
 # Mock Web Server for PHP 7.1
 
-[![Build Status](https://img.shields.io/travis/Nicc0/PHP-Mock-Web-Server.svg?style=flat-square)](https://travis-ci.org/Nicc0/php-mock-web-server) [![Codecov](https://img.shields.io/codecov/c/github/nicc0/php-mock-web-server.svg?style=flat-square)](https://codecov.io/gh/Nicc0/php-mock-web-server)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/nicc0/php-mock-web-server.svg?style=flat-square)](https://packagist.org/packages/nicc0/php-mock-web-server) [![GitHub](https://img.shields.io/github/license/Nicc0/PHP-Mock-Web-Server.svg?style=flat-square)](Nicc0/PHP-Mock-Web-Server) [![Build Status](https://img.shields.io/travis/Nicc0/PHP-Mock-Web-Server.svg?style=flat-square)](https://travis-ci.org/Nicc0/php-mock-web-server) [![Codecov](https://img.shields.io/codecov/c/github/nicc0/php-mock-web-server.svg?style=flat-square)](https://codecov.io/gh/Nicc0/php-mock-web-server) 
+
 
 ## Library Features
 
@@ -60,3 +61,7 @@ if ($mockWebServer->isRunning()) {
 
 ```
 ## Example Responses
+
+## License
+
+The MIT License (MIT). Please see License File for more information. © Daniel Tęcza
