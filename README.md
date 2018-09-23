@@ -1,8 +1,19 @@
-<center>
-![Mock Web Server for PHP 7.1](https://i.imgur.com/6NvxKzB.png)
- 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/nicc0/php-mock-web-server.svg?style=flat-square)](https://packagist.org/packages/nicc0/php-mock-web-server) [![GitHub](https://img.shields.io/github/license/Nicc0/PHP-Mock-Web-Server.svg?style=flat-square)](Nicc0/PHP-Mock-Web-Server) [![Build Status](https://img.shields.io/travis/Nicc0/PHP-Mock-Web-Server.svg?style=flat-square)](https://travis-ci.org/Nicc0/php-mock-web-server) [![Codecov](https://img.shields.io/codecov/c/github/nicc0/php-mock-web-server.svg?style=flat-square)](https://codecov.io/gh/Nicc0/php-mock-web-server) 
-</center>
+<p align="center"><img alt="Mock Web Server for PHP 7.1" src="https://i.imgur.com/6NvxKzB.png"></p>
+
+<p align="center">
+ <a href="https://packagist.org/packages/nicc0/php-mock-web-server">
+  <img alt="Latest Version on Packagist" src="https://img.shields.io/packagist/v/nicc0/php-mock-web-server.svg?style=flat-square">
+ </a>
+ <a href="https://github.com/Nicc0/PHP-Mock-Web-Server/blob/readme/LICENSE">
+  <img alt="License" src="https://img.shields.io/github/license/Nicc0/PHP-Mock-Web-Server.svg?style=flat-square">
+ </a>
+ <a href="https://travis-ci.org/Nicc0/php-mock-web-server">
+  <img alt="Build Status" src="https://img.shields.io/travis/Nicc0/PHP-Mock-Web-Server.svg?style=flat-square">
+ </a>
+ <a href="https://codecov.io/gh/Nicc0/php-mock-web-server">
+  <img alt="Coverages" src="https://img.shields.io/codecov/c/github/nicc0/php-mock-web-server.svg?style=flat-square">
+ </a>
+</p>
 
 ## Library Features
 
