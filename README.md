@@ -15,27 +15,12 @@
  </a>
 </p>
 
-## Library Features
+## About PHP Mock Web Server
 
- - List item
- -  
- - Compatible with PHP 7.1 and later
- - And much more
-
-## Requirements
-
- - PHP 7.1
- - ext-json
- - ext-sockets
- - ext-ctype
 
 ## Installation
 
-PHP Mock Web Server is available on [Packagist](https://packagist.org/packages/nicc0/php-mock-web-server) and installation via Composer is the recommended way to install PHP Mock Web Server. Just add this line to your `composer.json` file:
-```json
-"nicc0/php-mock-web-server": "~1.0.0"
-```
-or run
+PHP Mock Web Server is available on [Packagist](https://packagist.org/packages/nicc0/php-mock-web-server) and installation via Composer is the recommended way to install PHP Mock Web Server. Just run this command in your project repository:
 ```sh
 composer require-dev nicc0/php-mock-web-server
 ```
@@ -72,8 +57,47 @@ if ($mockWebServer->isRunning()) {
 }
 
 ```
-## Example Responses
+## Default Response
+```json
+{
+    "host": "127.0.0.1",
+    "port": 58389,
+    "method": "GET",
+    "status": 200,
+    "root": "127.0.0.1:58389",
+    "url": "http:\/\/127.0.0.1:58389\/",
+    "uri": "\/",
+    "headers": {
+        "Host": "127.0.0.1:58389",
+        "Connection": "close"
+    },
+    "post": [],
+    "get": [],
+    "server": {
+        "DOCUMENT_ROOT": "\/home\/nicco\/www\/mockwebserver\/tests",
+        "REMOTE_ADDR": "127.0.0.1",
+        "REMOTE_PORT": "54157",
+        "SERVER_SOFTWARE": "PHP 7.1.17-1+0~20180505045738.17+stretch~1.gbpde69c6 Development Server",
+        "SERVER_PROTOCOL": "HTTP\/1.0",
+        "SERVER_NAME": "127.0.0.1",
+        "SERVER_PORT": "58389",
+        "REQUEST_URI": "\/",
+        "REQUEST_METHOD": "GET",
+        "SCRIPT_NAME": "\/",
+        "SCRIPT_FILENAME": "\/home\/nicco\/www\/mockwebserver\/server\/TempWebServer.php",
+        "PHP_SELF": "\/",
+        "HTTP_HOST": "127.0.0.1:58389",
+        "HTTP_CONNECTION": "close",
+        "REQUEST_TIME_FLOAT": 1537723564.846396,
+        "REQUEST_TIME": 1537723564
+    },
+    "cache": {
+        "type": "Nicc0\\MockWebServer\\Cache\\FileCache",
+        "key": "7e969cbbec3e3da5f28a1eb9f6e67978"
+    }
+}
+```
 
 ## License
 
-The MIT License (MIT). Please see License File for more information. © Daniel Tęcza
+The MIT License (MIT). Please see License File for more information. © Daniel "Nicc0" Tęcza
